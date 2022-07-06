@@ -13,6 +13,7 @@ func Connect() (*mongo.Database, error) {
     clientOptions := options.Client()
     clientOptions.ApplyURI(url)
     client, err := mongo.NewClient(clientOptions)
+    
     if err != nil {
         return nil, err
     }
